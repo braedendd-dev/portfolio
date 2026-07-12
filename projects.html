@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+ <head>
+  <title>
+   Projects - ePortfolio by Braeden Davis
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+  <link href="assets/css/main.css" rel="stylesheet"/>
+ </head>
+ <body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper">
+   <!-- Main -->
+   <div id="main">
+    <div class="inner">
+     <!-- Header -->
+     <header id="header">
+      <a class="logo" href="index.html">
+       <strong>
+        ePortfolio
+       </strong>
+       by Braeden Davis
+      </a>
+      <ul class="icons">
+       <li>
+        <a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/braeden-davis-322b1734a/" rel="noopener noreferrer" target="_blank">
+         <span class="label">
+          LinkedIn
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="icon brands fa-github" href="https://github.com/braedendd-dev" rel="noopener noreferrer" target="_blank">
+         <span class="label">
+          GitHub
+         </span>
+        </a>
+       </li>
+      </ul>
+     </header>
+     <!-- Content -->
+     <section>
+      <header class="main">
+       <h1>
+        Projects
+       </h1>
+      </header>
+      <p>
+       The projects below showcase a selection of work completed throughout my time at
+										Trevecca Nazarene University, demonstrating my ability to learn new technologies,
+										tackle technical challenges, and build practical solutions.
+      </p>
+      <hr class="major"/>
+      <!-- Content -->
+      <h2 id="carmike">
+       Carmike Cinemas App Prototype
+      </h2>
+      <p>
+       This is a preview of the Carmike Cinemas mobile app. You can interact with the embedded prototype below or click the button to open it fullscreen in a new tab.
+      </p>
+      <!-- Embedded Figma Mobile App Prototype -->
+      <div style="max-width: 100%; height: 750px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
+       <iframe allowfullscreen="" src="https://embed.figma.com/proto/S3ZAcqCz7nNtakUXyEm5Yj/Carmike-Cinemas-App?node-id=726-591&amp;p=f&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=659%3A895&amp;starting-point-node-id=726%3A627&amp;embed-host=share" style="width: 100%; height: 100%; border: 1px solid rgba(0, 0, 0, 0.1);" title="Carmike Cinemas App Prototype">
+       </iframe>
+      </div>
+      <!-- Optional: Fullscreen Link -->
+      <p style="text-align: center; margin-top: 1.5em;">
+       <a class="button" href="https://www.figma.com/proto/S3ZAcqCz7nNtakUXyEm5Yj/Carmike-Cinemas-Rough-Draft-Wireframes?node-id=726-591&amp;starting-point-node-id=726%3A627&amp;scaling=scale-down&amp;content-scaling=fixed&amp;t=TqZOr58Nq3LKx6yl-1" rel="noopener" target="_blank">
+        View Fullscreen
+       </a>
+      </p>
+      <hr class="major"/>
+      <h2 id="huffman">
+       Huffman Coding Compression Tool
+      </h2>
+      <p>
+       Developed a Huffman Coding Compression Tool in C++ that compresses and decompresses text files using a 7-bit ASCII table, ensuring lossless conversion between .txt and .huf formats.
+      </p>
+      <!-- Side-by-Side Screenshot Layout -->
+      <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
+       <!-- Screenshot 1 -->
+       <div style="flex: 1; min-width: 300px; max-width: 480px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+        <img alt="Huffman Coding GUI View 1" src="images/huffmancoding_ss.png" style="width: 100%; height: auto; display: block;"/>
+       </div>
+       <!-- Screenshot 2 -->
+       <div style="flex: 1; min-width: 300px; max-width: 480px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+        <img alt="Huffman Coding GUI View 2" src="images/huffmancoding_ss2.png" style="width: 100%; height: auto; display: block;"/>
+       </div>
+      </div>
+      <!-- Compression Chart for Huffman Coding -->
+      <h3 style="margin-top: 2.5em;">
+       Compression Efficiency Chart
+      </h3>
+      <p>
+       This chart shows the compression efficiency of different datasets processed using the Huffman Coding Compression Tool.
+      </p>
+      <canvas height="200" id="compressionChart" width="400">
+      </canvas>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js">
+      </script>
+      <script>
+       var ctx = document.getElementById('compressionChart').getContext('2d');
+											var compressionChart = new Chart(ctx, {
+												type: 'bar',
+												data: {
+													labels: ['Dataset 1', 'Dataset 2', 'Dataset 3', 'Dataset 4'], // Reversed Dataset order
+													datasets: [{
+														label: 'Original Size (KB)',
+														data: [16, 80, 239, 1191], // Reversed Original Sizes
+														backgroundColor: 'rgba(0, 123, 255, 0.5)',
+														borderColor: 'rgba(0, 123, 255, 1)',
+														borderWidth: 1
+													},
+													{
+														label: 'Compressed Size (KB)',
+														data: [11, 49, 144, 718], // Reversed Compressed Sizes
+														backgroundColor: 'rgba(40, 167, 69, 0.5)',
+														borderColor: 'rgba(40, 167, 69, 1)',
+														borderWidth: 1
+													}]
+												},
+												options: {
+													responsive: true,
+													scales: {
+														y: {
+															beginAtZero: true
+														}
+													},
+													plugins: {
+														legend: {
+															position: 'top',
+														},
+														tooltip: {
+															callbacks: {
+																label: function(tooltipItem) {
+																	// Access the corresponding datasets values for Original and Compressed Sizes
+																	const originalSize = compressionChart.data.datasets[0].data[tooltipItem.dataIndex]; // Get original size
+																	const compressedSize = compressionChart.data.datasets[1].data[tooltipItem.dataIndex]; // Get compressed size
+																	
+																	// Calculate percentage
+																	const percentage = ((originalSize - compressedSize) / originalSize * 100).toFixed(2) + '%';
+																	
+																	// Return formatted label for tooltip
+																	return tooltipItem.dataset.label + ': ' + tooltipItem.raw + ' (Compression: ' + percentage + ')';
+																}
+															}
+														}
+													}
+												}
+											});
+      </script>
+      <hr class="major"/>
+      <h2 id="sqlbrowser">
+       SQL Browser
+      </h2>
+      <p>
+       This Qt/C++ SQL Browser connects to a local MySQL instance and logs every executed query, providing a real‑time GUI for browsing, editing, and auditing database operations.
+      </p>
+      <!-- Side-by-Side Screenshot and Video Preview -->
+      <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
+       <!-- Screenshot Card -->
+       <div style="flex: 1; min-width: 300px; max-width: 480px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+        <img alt="QT App Starting Screen" src="images/sqlbrower_ss.png" style="width: 100%; height: auto; display: block;"/>
+       </div>
+       <!-- Video Card -->
+       <div style="flex: 1; min-width: 300px; max-width: 480px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+        <video controls="" style="width: 100%; height: auto; display: block;">
+         <source src="videos/sqlbrowser_sr.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+       </div>
+      </div>
+      <!-- Full-width Rectangle Image -->
+      <div style="max-width: 980px; margin: 0 auto 2em; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+       <img alt="Full-width Preview" src="images/sqlbrowser_ss2.png" style="width: 100%; height: auto; display: block;"/>
+      </div>
+     </section>
+    </div>
+   </div>
+   <!-- Sidebar -->
+   <div id="sidebar">
+    <div class="inner">
+     <!-- Menu -->
+     <nav id="menu">
+      <header class="major">
+       <h2>
+        Menu
+       </h2>
+      </header>
+      <ul>
+       <li>
+        <a href="index.html">
+         Home
+        </a>
+       </li>
+       <li>
+        <a href="aboutme.html">
+         About Me
+        </a>
+       </li>
+       <li>
+        <a href="projects.html">
+         Projects
+        </a>
+       </li>
+       <li>
+        <a href="resume.html">
+         Resume
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <!-- Section -->
+     <section>
+      <header class="major">
+       <h2>
+        Featured Content
+       </h2>
+      </header>
+      <div class="mini-posts">
+       <article>
+        <a class="image" href="https://blog.trevecca.edu/thehill/trevecca-student-wins-gold-at-addy-awards-for-mobile-app-design" rel="noopener noreferrer" target="_blank">
+         <img alt="Trevecca blog article about Braeden Davis winning a Gold ADDY Award" src="images/thumbnail1.webp">
+         </img>
+        </a>
+        <p>
+         <a href="https://blog.trevecca.edu/thehill/trevecca-student-wins-gold-at-addy-awards-for-mobile-app-design" rel="noopener noreferrer" target="_blank">
+          Read my story
+         </a>
+         &ndash; From class project to award-winning app design.
+        </p>
+       </article>
+      </div>
+     </section>
+     <!-- Section -->
+     <section>
+      <header class="major">
+       <h2>
+        Get in touch
+       </h2>
+      </header>
+      <p>
+       I&rsquo;m always open to new opportunities. Feel free to reach out!
+      </p>
+      <ul class="contact">
+       <li class="icon solid fa-envelope">
+        <a href="mailto:braedendavis02@icloud.com">
+         braedendavis02@icloud.com
+        </a>
+       </li>
+       <li class="icon solid fa-phone">
+        (828) 446-2089
+       </li>
+       <li class="icon solid fa-home">
+        Charlotte, NC
+       </li>
+      </ul>
+     </section>
+     <!-- Footer -->
+     <footer id="footer">
+      <p class="copyright">
+       &copy; Braeden Davis. All rights reserved.
+						Design:
+       <a href="https://html5up.net">
+        HTML5 UP
+       </a>
+       .
+      </p>
+     </footer>
+    </div>
+   </div>
+  </div>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js">
+  </script>
+  <script src="assets/js/browser.min.js">
+  </script>
+  <script src="assets/js/breakpoints.min.js">
+  </script>
+  <script src="assets/js/util.js">
+  </script>
+  <script src="assets/js/main.js">
+  </script>
+ </body>
+</html>
